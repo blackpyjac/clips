@@ -7,7 +7,20 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    /* n either the tsconfig.json or tsconfig.app.json files, you can set the noPropertyAccessFromIndexSignature to false inside the compilerOptions object. This should effectively disable the option.
+
+
+
+Access Properties Without "dot" Syntax
+If you prefer to keep this option enabled, you will need to access properties with square brackets instead of dot syntax. For example, let's say you were accessing a property like so: form.name
+
+And it produces the following error: Property 'name' comes from an index signature, so it must be accessed with ['name']
+
+You will need to change your syntax to this: form['name']
+
+
+     */
+    "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -18,10 +31,7 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2020",
-      "dom"
-    ]
+    "lib": ["es2020", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
