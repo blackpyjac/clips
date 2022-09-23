@@ -5,6 +5,9 @@ import { ModalComponent } from './modal/modal.component';
 import { TabsContainerComponent } from './tabs-container/tabs-container.component';
 import { TabComponent } from './tab/tab.component';
 import { InputComponent } from './input/input.component';
+import { NgxMaskModule } from 'ngx-mask';
+import { AlertComponent } from './alert/alert.component';
+
 //import { ModalService } from '../services/modal.service';
 
 
@@ -14,17 +17,21 @@ import { InputComponent } from './input/input.component';
     ModalComponent,
     TabsContainerComponent,
     TabComponent,
-    InputComponent
+    InputComponent,
+    AlertComponent
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot()
+
   ], 
   exports: [
     ModalComponent,
     TabsContainerComponent,
     TabComponent,
-    InputComponent
+    InputComponent,
+    AlertComponent
   ],
  /* module level  providers: [
     ModalService
